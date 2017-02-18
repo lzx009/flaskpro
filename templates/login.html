@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <div>
+        <form action="/login/" method="post">
+            <table>
+                <tr>
+                    <td>用户名:</td>
+                    <td><input name="username" id="username" type="text"></td>
+                </tr>
+                <tr>
+                    <td>密  码:</td>
+                    <td><input name="password" id="password" type="password"></td>
+                </tr>
+                <tr>
+                    <td><input name="reset" id="reset" type="reset"></td>
+                    <td><input name="submit" id="submit" type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        {% if error %}
+            {{ error }}
+        {% endif %}
+
+    </div>
+</body>
+</html>
